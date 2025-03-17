@@ -32,3 +32,11 @@ Pascal : Niklaus Wirth
 print(exstr*3)
 ## 왜 공백이 출력될까?
 ## 코드에서 줄을 맞춘다고 들여쓰기가 자동으로 되었기 때문에 공백이 생김
+
+# 무한루프로 돌리되, 0을 누르면 끝내게 만들어보자    
+while True:
+    dan2 = int(input("단수를 입력하세요(끝내려면 0을 누르세요.): "))
+    if dan2==0:
+        break
+    for i in range(1,11):
+        print(f"{dan2} * {i} = {dan2*i}")
