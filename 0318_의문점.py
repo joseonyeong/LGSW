@@ -39,12 +39,12 @@ while True:
     
     while True:
         answer = input('끝내시겠습니까? (Y/N): ').strip().upper()
-        if answer in ['Y', 'N']:
+        if answer in ['Y', 'N', 'YES', 'NO']:
             break
         else:
             print('Y 또는 N으로 입력하세요.')
             
-    if answer == 'Y':
+    if answer == 'Y' or answer == 'YES':
         break
     else:
         k = 0
