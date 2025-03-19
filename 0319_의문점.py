@@ -34,3 +34,14 @@ for dan in range(1,n+1,1):
     # 입력받은 dan과 마지막 별 개수 차이는 단수 2배 - 1 규칙성을 가짐
     print(f"{star:^{n*2-1}}")
     i += 1
+    
+print("행렬 덧셈")
+a = [[1,0,1],[0,2,0],[1,2,1]]
+b = [[2,3,1],[0,1,1],[1,1,1]]
+c = []
+for i in range(len(a)):
+    row = []    # 똑같이 다차원으로 받기 위해선 행을 따로 지정해야함
+    for j in range(len(a[i])):
+        row.append(a[i][j] + b[i][j])   # row로 안 할 경우 1차원으로 append됨
+    c.append(row)
+print(c)
