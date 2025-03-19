@@ -58,4 +58,102 @@
 #     print(f"{star:^{n*2-1}}")
 #     i += 1
 
+# sigletion = ('lion',)
+# print(type(sigletion))
+# # <class 'tuple'>
 
+# teams = ['타이거즈','라이온즈','트윈스','베어스','위즈','랜더스']
+# # enumerate() index와 요소 함께 리턴
+# for index, baseball in enumerate(teams):
+#     print(f"{index+1}순위: {baseball}")
+
+# teams = ['타이거즈','라이온즈','트윈스','베어스','위즈','랜더스']
+# i = 1
+# for baseball in teams:
+#     print(i, baseball)
+#     i += 1
+# for i in range(len(teams)):
+#     print(i+1, teams[i])
+
+# print("성적처리_리스트")
+# jisoo = [90, 85, 93]
+# mansoo = [78, 92, 89]
+# kor = jisoo[0] + mansoo[0]
+# math = jisoo[1] + mansoo[1]
+# eng = jisoo[2] + mansoo[2]
+# print(f"국어:{kor}, 수학:{math}, 영어:{eng}")
+
+# print("배열로 총점 넣기")
+# scores = []
+# for i in range(3):
+#     scores.append(jisoo[i]+mansoo[i])
+# #print(scores)
+# print(f"국어:{scores[0]}, 수학:{scores[1]}, 영어:{scores[2]}")
+
+# # print('리스트 합계 구하기')
+# nums = [10,4,5,-1,6,12,40]
+# evenNum = 0 #짝수번째 합 넣을 변수
+# for index, value in enumerate(nums):
+#     # index가 짝수인 것만
+#     if index % 2 == 0:
+#         evenNum += value
+# print(f"짝수번째 원소들의 합: {evenNum}")
+
+# print('슬라이싱 사용해서')
+# num = 0
+# evenNums = nums[1::2]
+# for index, value in enumerate(evenNums):
+#     print(value)
+#     num += value
+# print(f"짝수번째 원소들의 합: {num}")  
+
+# print("max값 찾기")
+# nums = [-10,-4,-5,-1,-6,-12,-40]
+# max = nums[0]
+# for num in nums:
+#     if max < num:
+#         max = num
+# print(max)
+
+print("성적처리_이차원리스트")
+scores = [[90,85,93],
+          [78,92,89]]
+row = []
+# total = []
+#     # 세로 버전 (각 과목 합합)
+# row.append(scores[0])
+# # print(row)  # 90,85,93
+# for i in range(1,len(scores)):
+#     for j in range(0,len(scores[i])):
+#         row[i-1][j] = scores[i][j]+row[i-1][j]
+#     total.append(row)
+# print(f"각 과목 합 (세로합): {total}")
+
+
+for i in range(len(scores[0])):
+    S=0
+    for j in range(len(scores)):
+        S+=scores[j][i]
+    row.append(S)
+print(row)
+       
+width = [] 
+for k in range(len(scores)):
+    w = 0
+    for z in range(len(scores[0])):
+        w+=scores[k][z]
+    width.append(w)    
+print(width)    
+
+
+
+# print("행렬 덧셈")
+# a = [[1,0,1],[0,2,0],[1,2,1]]
+# b = [[2,3,1],[0,1,1],[1,1,1]]
+# c = []
+# for i in range(len(a)):
+#     row = []    # 똑같이 다차원으로 받기 위해선 행을 따로 지정해야함
+#     for j in range(len(a[i])):
+#         row.append(a[i][j] + b[i][j])
+#     c.append(row)
+# print(c)
