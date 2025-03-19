@@ -13,3 +13,11 @@ for i in range(1,11,2):
     print(" " * j, end='')
     print('*' * i)
     j -= 1
+    
+print('중첩 for문으로 반쪽 별')
+for j in range(5):
+    # 중첩 for문으로 사용하기 위해 i의 범위를 j를 사용해 설정
+    for i in range(j+1):
+        #
+        print('*')
+    print()
