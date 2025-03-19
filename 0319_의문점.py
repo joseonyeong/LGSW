@@ -45,3 +45,33 @@ for i in range(len(a)):
         row.append(a[i][j] + b[i][j])   # row로 안 할 경우 1차원으로 append됨
     c.append(row)
 print(c)
+
+print('성적처리_이차원리스트')
+scores = [[90,85,93],
+          [78,92,89]]
+row = []
+for i in range(len(scores[0])):
+    S=0
+    for j in range(len(scores)):
+        S+=scores[j][i]
+    row.append(S)
+print(row)
+       
+width = [] 
+for k in range(len(scores)):
+    w = 0
+    for z in range(len(scores[0])):
+        w+=scores[k][z]
+    width.append(w)    
+print(width)  
+
+# ver2
+total = []
+# 세로 버전 (각 과목 합합)
+row.append(scores[0])
+# print(row)  # 90,85,93
+for i in range(1,len(scores)):
+    for j in range(0,len(scores[i])):
+        row[i-1][j] = scores[i][j]+row[i-1][j]
+    total.append(row)
+print(f"각 과목 합 (세로합): {total}")
