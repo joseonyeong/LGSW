@@ -18,6 +18,19 @@ print('중첩 for문으로 반쪽 별')
 for j in range(5):
     # 중첩 for문으로 사용하기 위해 i의 범위를 j를 사용해 설정
     for i in range(j+1):
-        #
-        print('*')
+        # 자동 줄바꿈 없애야 별모양 나옴옴
+        print('*', end='')
     print()
+
+# 2단 == 3개 차이 1개
+# 3단 == 5개 차이 2개
+# 4단 == 7개 차이 3개
+# 5단 == 9개 차이 4개
+print('f-string 사용해서 별 찍기')
+n = int(input('원하는 층수: '))
+i = 0
+for dan in range(1,n+1,1):
+    star = '*' * (dan+i)
+    # 입력받은 dan과 마지막 별 개수 차이는 단수 2배 - 1 규칙성을 가짐
+    print(f"{star:^{n*2-1}}")
+    i += 1
