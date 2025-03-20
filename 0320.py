@@ -90,3 +90,94 @@
 # # tmp.append(row)   # 일차원 배열로 저장
 # print(tmp) 
 
+# print("딕셔너리")
+# en2ko = {
+#     'book' : '책',
+#     'snake': '뱀',
+#     'language': '언어'
+# }
+# ko2en = {}
+
+# for k,v in en2ko.items():
+#         # setdefault함수는 키-값 추가, 들어있는 값 수정 불가
+#     ko2en.setdefault(v,k)
+# print(ko2en)
+
+# print('성적처리_딕셔너리.ver')
+
+# data = [
+#     {'name': '철수', 'math': 85, 'eng': 90, 'sci': 75},
+#     {'name': '준호', 'math': 73, 'eng': 85, 'sci': 93},
+#     {'name': '영희', 'math': 92, 'eng': 88, 'sci': 90}
+# ]
+
+# result = {}
+
+# for d in data:
+#     total = 0  # 총점 초기화
+#     count = 0  # 과목 수 초기화
+    
+#     for k, v in d.items():
+#         if k != 'name':  # 이름 제외하고 점수만 합산
+#             total += v
+#             count += 1
+    
+#     avg = total / count  # 평균 계산
+    
+#     result[d['name']] = {'total': total, 'average': round(avg, 4)}
+
+# print(result)
+
+# print('리스트 컴프리헨션')
+# n = int(input("n: "))
+# L = []
+# for i in range(1, n+1):
+#     L.append(i)
+# print(L)
+
+# L = [i for i in range(1, n+1)]
+
+# print("몫과 나머지 구하는 함수")
+# def func(n, k):
+#     result = []
+#     result.append(10 // k) # 몫
+#     result.append(10 % k)  # 나머지
+#     return result
+# def func2(n,k):
+#     while True:
+#         if n < 0 or k < 0 :
+#             print('양수로 입력하세요')
+#         else:
+#            result = []
+#            result.append(10 // k) # 몫
+#            result.append(10 % k)  # 나머지
+#            return result    
+# n = int(input('나눠질 수 입력: '))
+# k = int(input('나눌 수 입력: '))
+# print(func(n,k))
+# print(func2(n,k))
+
+# print("평균 구하는 함수")
+# def func(arr):
+#     sum = 0
+#     for i in arr:
+#         i = int(i)
+#         sum += i
+#     mean = sum // len(arr)
+#     return mean
+# arr = input("리스트 또는 튜플 입력(숫자 사이는 공백으로 입력): ")
+# arr = arr.split()
+# print(func(arr))
+
+print('이차원 배열 평균 구하기')
+def func(x):
+    sum = 0
+    for j in range(len(x)):
+        for i in range(len(x[j])):
+            sum += x[j][i]
+        mean = sum / len(x[j])
+        print(f"{mean:.3f}")
+        sum = 0
+    
+x = [[78, 80, 95, 55, 67, 43], [45, 67, 90, 87, 88, 93]]
+func(x)
