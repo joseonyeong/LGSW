@@ -144,16 +144,3 @@ for k in range(len(scores)):
         w+=scores[k][z]
     width.append(w)    
 print(width)    
-
-
-
-# print("행렬 덧셈")
-# a = [[1,0,1],[0,2,0],[1,2,1]]
-# b = [[2,3,1],[0,1,1],[1,1,1]]
-# c = []
-# for i in range(len(a)):
-#     row = []    # 똑같이 다차원으로 받기 위해선 행을 따로 지정해야함
-#     for j in range(len(a[i])):
-#         row.append(a[i][j] + b[i][j])
-#     c.append(row)
-# print(c)
