@@ -168,14 +168,3 @@
 # arr = input("리스트 또는 튜플 입력(숫자 사이는 공백으로 입력): ")
 # arr = arr.split()
 # print(func(arr))
-
-print('이차원 배열 평균 구하기')
-def func(x):
-    sum = 0
-    for j in range(len(x)):
-        for i in range(len(x[j])):
-            sum += x[j][i]
-        mean = sum / len(x[j])
-        print(f"{mean:.3f}")
-        sum = 0
-    
