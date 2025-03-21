@@ -76,3 +76,23 @@ def process_orders(orders):
 # 실행
 result = process_orders(orders)
 print(result)
+
+import random
+def no_reduplication():
+    arr = [] 
+    for _ in range(6):  # 6개의 숫자를 뽑음
+        n = random.randrange(1, 46)
+        while n in arr:  # 중복이면 다시 뽑음
+            n = random.randrange(1, 46)
+        arr.append(n)  # 중복이 아니면 추가
+    return arr
+
+def no_reduplication():
+    arr = []  # 초기 배열 비워둠
+    while len(arr) < 6:  # 6개의 숫자가 찰 때까지 반복
+        n = random.randrange(1, 46)
+        if n not in arr:  # 중복 체크
+            arr.append(n)  # 중복이 아니면 추가
+    return arr
+
+print(no_reduplication())
