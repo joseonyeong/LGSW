@@ -28,15 +28,10 @@ def pizzaorderstep01():
                 print('선택된 메뉴:', menus[user-1])
                 order.append(menus[user-1])
                 order_price.append(price[user-1])
+                print('\n')
             else:
                 print('숫자 입력')
     return order, order_price
-
-# def main():
-#     print('피자 가게에 오신 것을 환영합니다.')
-#     menus = ['페퍼로니 피자', '스테이크 피자', '시푸드 피자']
-#     price = [29000, 32000, 32000]
-#     order = []
 
 if __name__ == '__main__':
     print('피자 가게에 오신 것을 환영합니다.')
