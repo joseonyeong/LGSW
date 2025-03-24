@@ -202,17 +202,3 @@ print(no_reduplication())
 
 # rdDef()
 # game(int(input('n: ')))
-
-# print('성적처리')
-#     # xlsx read module
-#     # xlsx 전용 라이브러리리
-# from openpyxl import load_workbook
-# wb = load_workbook(filename='dd.xlsx')
-#     # DataFrame으로 변환하는 함수
-# import pandas as pd
-# filename = 'dd.xlsx'
-# df = pd.read_excel(filename)
-
-# print('성적 자동 처리')
-# with open('filename.txt', 'r', encoding='utf-8') as f:
-#     f.readlines()
