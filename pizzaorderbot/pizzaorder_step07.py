@@ -1,3 +1,7 @@
+def clear_screen():
+    import os
+    os.system('cls' if os.name == 'nt' else 'clear')
+    
 def pizzaorder_step05():
     menus = {
         '피자': ['페퍼로니 피자', '스테이크 피자', '시푸드 피자'],
@@ -29,6 +33,7 @@ def pizzaorder_step05():
         
         # 종료
         if choice.upper() == 'F':
+            clear_screen()
             print('-------------')
             print('주문 내역')
             print('-------------')
@@ -63,9 +68,6 @@ def pizzaorder_step05():
         current_category = categories[i % (len(menus))]
     return order
 
-
 if __name__ == '__main__':
     print('피자 가게에 오신 것을 환영합니다.', end='\n')    
     pizzaorder_step05()
-    
-    

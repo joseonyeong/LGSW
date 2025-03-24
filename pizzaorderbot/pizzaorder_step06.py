@@ -38,7 +38,7 @@ def pizzaorder_step05():
             print('주문 내역')
             print('-------------')
             for key, value in order.items():
-                print(f"{key}: {value} ")
+                print(f"{key}: {','.join(value)}")
             print(f"총 금액: {order_price}원 ")
             print("주문이 완료되었습니다. 감사합니다.")
             break
@@ -47,12 +47,14 @@ def pizzaorder_step05():
             if i < len(categories) - 1:    
                 i += 1
                 current_category = categories[i]
+            clear_screen()
             # 이전 단계
         elif choice.upper() == 'P':
             if i > 0:
                 i -= 1
                 print(i)
                 current_category = categories[i]
+            clear_screen()
             # 숫자 제한
             # 숫자
         elif choice.isdigit():
@@ -63,7 +65,9 @@ def pizzaorder_step05():
                 # i += 1
                 # print(i)
                 order_price += prices[current_category][index]
+                clear_screen()
             else:
+                clear_screen()
                 print('다시 입력하세요') 
         current_category = categories[i % (len(menus))]
     return order
