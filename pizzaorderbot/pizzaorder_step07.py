@@ -44,15 +44,21 @@ def pizzaorder_step05():
             break
         # 다음 단계
         elif choice.upper() == 'N':
+                # 피자 없는데 토핑 주문 x
+            if i == 0 and not order['피자']:
+                print('피자를 먼저 선택해주세요.')
+                continue
             if i < len(categories) - 1:    
                 i += 1
                 current_category = categories[i]
+            clear_screen()
             # 이전 단계
         elif choice.upper() == 'P':
             if i > 0:
                 i -= 1
                 print(i)
                 current_category = categories[i]
+            clear_screen()
             # 숫자 제한
             # 숫자
         elif choice.isdigit():
@@ -60,10 +66,10 @@ def pizzaorder_step05():
             if int(choice) < len(menus[current_category])+1:
                 order[current_category].append( menus[current_category][index] )
                 print(f"선택된 메뉴: {menus[current_category][index]}")
-                # i += 1
-                # print(i)
                 order_price += prices[current_category][index]
+                clear_screen()
             else:
+                clear_screen()
                 print('다시 입력하세요') 
         current_category = categories[i % (len(menus))]
     return order
