@@ -166,7 +166,7 @@ if __name__ == '__main__':
             # user_input.isdigit()를 사용하여 사용자의 입력에 숫자만 들어있는지 검증하기 위해
             # 적당한 조건문을 사용하시오.
             # isdigit()은 user_input에 숫자만있다면 True, 숫자 이외의 값이 있다면 False를 반환
-            if None:
+            if not user_input.isdigit():
                 print("숫자만 입력하세요.")
             else:
                 user_input = int(user_input)
@@ -176,9 +176,9 @@ if __name__ == '__main__':
 
     # step2 각 변수에 사용자 입력을 받아 할당하시오.
     #       input() 함수 대신 위에서 작성한 filter_int_inpu()을 사용하시오.
-    birth_year = None("태어난 연도를 입력: ")
-    birth_month = None("태어난 달을 입력: ")
-    birth_day = None("태어난 일을 입력: ")
+    birth_year = filter_int_input("태어난 연도를 입력: ")
+    birth_month = filter_int_input("태어난 달을 입력: ")
+    birth_day = filter_int_input("태어난 일을 입력: ")
         
     # step3: 조건2 에 맞을 때 까지 현재 연도, 월, 일를 입력받으시오.
     # hint: continue 문을 적절한 위치에 삽입하시오.
@@ -186,7 +186,7 @@ if __name__ == '__main__':
         cur_year = filter_int_input("현재 연도를 입력: ") 
         if cur_year <= birth_year:
             print("현재 연도는 태어난 연도 보다 커야 합니다.")
-            
+            continue
 
         cur_month = filter_int_input("현재 달을 입력: ")
         cur_day = filter_int_input("현재 일을 입력: ")
